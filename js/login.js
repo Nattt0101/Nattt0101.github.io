@@ -21,6 +21,8 @@ signUpSubmit.addEventListener('click', () => {
 	  xhr.addEventListener("readystatechange", function () {
 		if (this.readyState === 4) {
 		  console.log(this.responseText);
+		  alert("Sign up Successful! ");
+		  container.classList.remove("right-panel-active");
 		}
 	  });
 	  
