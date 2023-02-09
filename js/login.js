@@ -20,10 +20,16 @@ signUpSubmit.addEventListener('click', () => {
 	  
 	  xhr.addEventListener("readystatechange", function () {
 		if (this.readyState === 4) {
-		  console.log(this.responseText);
-		  alert("Sign up Successful! ");
-		  container.classList.remove("right-panel-active");
+			if(this.status<300){
+				console.log(this.responseText);
+				alert("Sign up Successful! ");
+				container.classList.remove("right-panel-active");
+			}
+		  else{
+			alert("There's an error signing up :/ ")
+		  }
 		}
+
 	  });
 	  
 	  xhr.open("POST", "https://interactivedev-6863.restdb.io/rest/user-account");
