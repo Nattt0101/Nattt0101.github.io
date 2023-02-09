@@ -26,7 +26,7 @@ signUpSubmit.addEventListener('click', () => {
 	  
 	  xhr.open("POST", "https://interactivedev-6863.restdb.io/rest/user-account");
 	  xhr.setRequestHeader("content-type", "application/json");
-	  xhr.setRequestHeader("x-apikey", "<63e3b666478852088da67ec9>");
+	  xhr.setRequestHeader("x-apikey", "63e3b666478852088da67ec9");
 	  xhr.setRequestHeader("cache-control", "no-cache");
 	  
 	  xhr.send(data);
@@ -43,17 +43,8 @@ signInSubmit.addEventListener('click', () => {
 	xhr.addEventListener("readystatechange", function () {
 	  if (this.readyState === 4) {
 		console.log(this.responseText);
-	  }
-	});
-	
-	xhr.open("GET", "https://interactivedev-6863.restdb.io/rest/user-account");
-	xhr.setRequestHeader("content-type", "application/json");
-	xhr.setRequestHeader("x-apikey", "<63e3b666478852088da67ec9>");
-	xhr.setRequestHeader("cache-control", "no-cache");
-	
-	xhr.send(data);
-
-	let signin=false;
+		let data=JSON.parse(this.responseText);
+		let signin=false;
 
 	for (let i = 0; i < data.length; i++) {
 		if(signinusername==data[i].username && signinpassword==data[i].password){
@@ -64,9 +55,22 @@ signInSubmit.addEventListener('click', () => {
 		}
 		
 	}
+
+
 	if (signin==false){
 		alert("Username or Password is incorrect! ");
 	}
+	  }
+	});
+	
+	xhr.open("GET", "https://interactivedev-6863.restdb.io/rest/user-account");
+	xhr.setRequestHeader("content-type", "application/json");
+	xhr.setRequestHeader("x-apikey", "63e3b666478852088da67ec9");
+	xhr.setRequestHeader("cache-control", "no-cache");
+	
+	xhr.send(data);
+
+	
 });
 
 signUpButton.addEventListener('click', () => {
