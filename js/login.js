@@ -19,6 +19,7 @@ signUpSubmit.addEventListener('click', () => {
 	  xhr.withCredentials = false;
 	  
 	  xhr.addEventListener("readystatechange", function () {
+		//alerts
 		if (this.readyState === 4) {
 			if(this.status<300){
 				console.log(this.responseText);
