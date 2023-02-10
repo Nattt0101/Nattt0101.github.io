@@ -89,7 +89,6 @@ img{
 .image1 {
   position: relative;
   inset-block-start: 0;
-  inset-inline-end: 50;
   inline-size: 15em;
   inset-block-start: 45%;
   inset-inline-end: -8%;
