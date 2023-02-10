@@ -12,6 +12,28 @@ discountcalc.onclick=()=>{
 if (discountcoupon.value=="XKL280"){
 	discountamt=25;
 }
+
+else if(discountcoupon.value=="DXH112"){
+	discountamt=15;
+}
+
+else if(discountcoupon.value=="BOI222"){
+	discountamt=10;
+}
+
+else if(discountcoupon.value=="PUH102"){
+	discountamt=5;
+}
+
+else if(discountcoupon.value=="UHH292"){
+	discountamt=2;
+}
+
+else if(discountcoupon.value=="BPH200"){
+	alert("Free Shipping applied!")
+	discountamt=0;
+}
+
 else{
 alert("invalid coupon code!")
 }
