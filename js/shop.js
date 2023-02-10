@@ -2,6 +2,31 @@
 let cartIcon = document.querySelector("#cart-icon");
 let cart = document.querySelector(".cart");
 let closeCart = document.querySelector("#close-cart");
+let checkout= document.querySelector(".checkout");
+let checkoutbutton=document.querySelector("#checkout");
+let discountcoupon= document.querySelector("#discount");
+let discountcalc=document.querySelector("#calcdiscount");
+let discountamt=0;
+
+discountcalc.onclick=()=>{
+if (discountcoupon.value=="XKL280"){
+	discountamt=25;
+}
+else{
+alert("invalid coupon code!")
+}
+updatetotal();
+}
+
+checkoutbutton.onclick=()=>{
+	checkout.classList.remove("active");
+	alert("Your Order has been placed")
+	var cartContent = document.getElementsByClassName("cart-content")[0];
+	while(cartContent.hasChildNodes()){
+		cartContent.removeChild(cartContent.firstChild);
+	}
+	updatetotal();
+}
 
 cartIcon.onclick = () =>{
 	cart.classList.add("active");
@@ -45,12 +70,8 @@ function ready(){
 
 // Buy button working
 function buyButtonClicked(){
-	alert("Your Order has been placed")
-	var cartContent = document.getElementsByClassName("cart-content")[0];
-	while(cartContent.hasChildNodes()){
-		cartContent.removeChild(cartContent.firstChild);
-	}
-	updatetotal();
+	cart.classList.remove("active");
+	checkout.classList.add("active");
 }
 
 //Remove items from cart
@@ -121,7 +142,11 @@ function updatetotal(){
 		total = total + price * quantity;
 	}
 		// If price contain some cents value
+		total=total-discountamt;
 		total = Math.round(total *100) / 100;
 
+		if(total<0){
+			total=0;
+		}
 		document.getElementsByClassName("total-price")[0].innerText = "$" + total;
 } 
