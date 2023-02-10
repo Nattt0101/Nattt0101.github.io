@@ -13,45 +13,11 @@ body {
     color: #000;
 }
 
-.student-profile .card {
-
-  border-radius: 10px;
-}
-
-.student-profile .card .card-header .profile_img {
-  width: 150px;
-  height: 150px;
-  object-fit: cover;
-  margin: 10px auto;
-  border: 10px solid #ccc;
-  border-radius: 50%;
-}
-
-.student-profile .card h3 {
-  font-size: 20px;
-  font-weight: 700;
-}
-
-.student-profile .card p {
-  font-size: 16px;
-  color: #000;
-}
-
-.student-profile .table th,
-.student-profile .table td {
-    font-size: 14px;
-    padding: 5px 10px;
-    color: #000;
-}
-
-.pt-4, .py-4 {
-  padding-top: 6.5rem !important;
-}
 
 .coupon {
-  border: 5px dotted #bbb;
+  border: 5px dotted #0f0844;
   width: 20%;
-  border-radius: 15px;
+  border-radius: 10px;
   margin: 0 auto;
   max-width: 600px;
 }
@@ -71,7 +37,24 @@ body {
 }
 
 .break{
-  height:50px;
+  height:40px;
+}
+
+
+header h1 {
+  background-image: linear-gradient(to right ,#553c9a, #ee4b2b, #00c2cb, #ff7f50, #553c9a);
+  background-size: 200%;
+  background-position: -200%; 
+  animation: animated-gradient 3s infinite alternate-reverse;
+}
+
+
+
+
+@keyframes animated-gradient{
+  to{
+    background-position: 200%;
+  }
 }
 
 @media (max-width: 600px){
