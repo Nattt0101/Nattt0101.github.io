@@ -20,7 +20,7 @@ Our interpretation of the theme is to create a gamified shopping website to prom
 For the checkpoint 1, we have created the various html, css and javascript. We have decided to add the navigation bar on all the html except for login.html and signup.html because those 2 html will be for user to create or sign in their account to continue using the website. We have implemented a few features such as games (random gift generator), flip card for the contact and many other features. We have also created the wireframes for the html in both desktop and mobile view.</P
 <br>
 <p>
-For checkpoint 2, we have created  games, and a profile for users. We also added a signup and login page and a shopping page. For the games, we made a lucky spinner wheel with numbers on it. We also made a list of prizes you can win at the side, the list is designed by canva. For the signup and login page, we made it animated, which is more aesthtically pleasing and space efficient. For the shopping page, it includes the cart and the shop itself, which is also very space efficient and less confusing for users. We also implemented API for the login and sign up page.</P>
+For checkpoint 2, we have created  games, and a coupon page for users to see what coupons they have. We also added a signup and login page and a shopping page. For the games, we made a lucky spinner wheel with numbers on it. We also made a list of prizes you can win at the side, the list is designed by canva. For the signup and login page, we made it animated, which is more aesthtically pleasing and space efficient. For the shopping page, it includes the cart and the shop itself, which is also very space efficient and less confusing for users. We also implemented API for the login and sign up page.</P>
 <br>
 <p>
 For checkpoint 3, we have finished all the features and mobile views. We made sure that the files are properly arranged and in lower caps. We also ensured that everything was working well. </p>
@@ -50,7 +50,7 @@ https://xd.adobe.com/embed/3d18e22f-edc5-4451-b929-bc9994ce73de-684b/
 <h2>Features</h2>
 <p>Home: A brief description about what topic we chose for this assignment and why. Also a brief description of our project.</p>
 <br>
-<p>Profile: Users can change their information here such as email address, phone number, username etc, they are also able to view the coupons they own. </p>
+<p>Coupon: Users can view the coupons that they can use during checkout. </p>
 <br>
 <p>Login: Users can login or sign up at this page.</p>
 <br>
@@ -63,17 +63,15 @@ https://xd.adobe.com/embed/3d18e22f-edc5-4451-b929-bc9994ce73de-684b/
 <br>
 
 <h3>Existing Features</h3>
-Feature 1 - allows users X to achieve Y, by having them fill out Z
-...
 In addition, you may also use this section to discuss plans for additional features to be implemented in the future:
 
 <h3>Features Left to Implement</h3>
 <br>
-<p><em>Another feature idea</em></p>
 <br>
 <p>1. adding a self collection option for students to collect the goods without paying mailing fee
   2. adding more games for users to select
   3. adding pop-up message at the games function to tell users what they have won
+  4. adding coupons into database
   <p>
     
  <p><em>Technologies Used</em></p>
@@ -96,11 +94,9 @@ Try to submit the empty form and verify that an error message about the required
 Try to submit the form with an invalid email address and verify that a relevant error message appears
 Try to submit the form with all inputs valid and verify that a success message appears.
 
-Profile form:
-Go to the "Profile" page
-Try to submit the empty form and verify that an error message about the required fields appears
-Try to submit the form with an invalid email address and verify that a relevant error message appears
-Try to submit the form with all inputs valid and verify that a success message appears.
+Coupon form:
+Go to the "Coupon" page
+The coupon header should have a rainbow animation! :))
 
 Games:
 Go to the "Games" page
